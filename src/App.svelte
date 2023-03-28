@@ -5,6 +5,7 @@
 	import Skills from "./components/Skills.svelte";
 	import Input from "./components/Input.svelte";
 	import Photos from "./components/Photos.svelte";
+	import CounterButton from "./components/CounterButton.svelte";
 
 	export let name;
 	export let lastName;
@@ -25,6 +26,7 @@
 	<Text anotherText="Initial date: 04/29/2023" />
 	<Skills />
 	<About />
+	<CounterButton />
 	<Photos />
 </main>
 

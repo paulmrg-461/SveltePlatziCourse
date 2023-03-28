@@ -36,6 +36,4 @@
         counter={ counter } 
         on:click={ incrementCounter }    
     />
-    <button on:click={ incrementCounter }>Add +1</button>
-    <button on:click={ toggleDarkMode }>{ styles.isDark ? 'Set light theme' : 'Set dark theme' }</button>
 </div>
