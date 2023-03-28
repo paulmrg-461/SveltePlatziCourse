@@ -1,13 +1,23 @@
 <script>
 	import About from "./components/About.svelte";
+	import Text from "./components/Text.svelte";
+	import Person from "./components/Person.svelte";
 	export let name;
 	export let lastName;
 	let svelteLogo = "https://arepa.s3.amazonaws.com/svelte-logo.png"
+
+	const personData = {
+		firstName: 'Paul',
+		lastName: 'Realpe',
+		age: 26,
+	}
 </script>
 
 <main>
 	<img src={ svelteLogo } alt="Svelte logo">
 	<h1>Hello {name} {lastName}!</h1>
+	<Text anotherText="Initial date: 04/29/2023" />
+	<Person personData={ personData } />
 	<About />
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 </main>
