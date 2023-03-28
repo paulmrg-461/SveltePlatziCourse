@@ -1,13 +1,32 @@
 <script>
+	import About from "./components/About.svelte";
 	export let name;
+	export let lastName;
+	let svelteLogo = "https://arepa.s3.amazonaws.com/svelte-logo.png"
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
+	<img src={ svelteLogo } alt="Svelte logo">
+	<h1>Hello {name} {lastName}!</h1>
+	<About />
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 </main>
 
 <style>
+	:global(body) {
+		background-color: azure;
+		color: darkslateblue;
+	}
+
+	/* definir estilos globales con variables */
+	:global(:root) {
+		--theme-color: purple;
+	}
+
+	p {
+		color: var(--theme-color);
+	}
+
 	main {
 		text-align: center;
 		padding: 1em;
@@ -15,8 +34,11 @@
 		margin: 0 auto;
 	}
 
+	main img {
+		width: 40%;
+	}
+
 	h1 {
-		color: #ff3e00;
 		text-transform: uppercase;
 		font-size: 4em;
 		font-weight: 100;
