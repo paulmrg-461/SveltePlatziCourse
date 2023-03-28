@@ -2,6 +2,7 @@
 	import About from "./components/About.svelte";
 	import Text from "./components/Text.svelte";
 	import Person from "./components/Person.svelte";
+	import Skills from "./components/Skills.svelte";
 	export let name;
 	export let lastName;
 	let svelteLogo = "https://arepa.s3.amazonaws.com/svelte-logo.png";
@@ -18,6 +19,7 @@
 	<h1>Hello {name} {lastName}!</h1>
 	<Text anotherText="Initial date: 04/29/2023" />
 	<Person personData={ personData } />
+	<Skills />
 	<About />
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 </main>
@@ -31,10 +33,6 @@
 	/* definir estilos globales con variables */
 	:global(:root) {
 		--theme-color: purple;
-	}
-
-	:global(:root.dark-theme) {
-		--theme-color: #fff;
 	}
 
 	:global(body.dark-theme) {
