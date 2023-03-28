@@ -1,5 +1,5 @@
-
 <script>
+    import Button from "./Button.svelte";
     let someText = `Flutter developer at Omni`;
     let counter = 0;
     let styles = { isDark: false };
@@ -31,6 +31,11 @@
     { /if }
 
     <h1>{ counter === 0 ? 'The counter is 0, please increment counter' : counter }</h1>
+    <Button 
+        text="Increment" 
+        counter={ counter } 
+        on:click={ incrementCounter }    
+    />
     <button on:click={ incrementCounter }>Add +1</button>
     <button on:click={ toggleDarkMode }>{ styles.isDark ? 'Set light theme' : 'Set dark theme' }</button>
 </div>
